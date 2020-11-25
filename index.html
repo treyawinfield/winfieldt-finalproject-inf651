@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.min.css">
+    <script src="js/main.js" type="module"></script>
+    <title>WeatherChecker</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1 tabindex="0" aria-label="Welcome to WeatherChecker" class="heading">WeatherChecker</h1>
+        </header>
+        <section class="top-section">
+            <form>
+                <label for="lookup">Enter a location</label>
+                <input id="lookup" type="text" placeholder="Lookup by city name">
+                <button type="submit" class="button" aria-label="Submit location search">
+                Search</button>
+            </form>
+            <p tabindex="0" class="msg"></p>
+        </section>
+
+        <section tabindex="0" class="bottom-section" id="bottom-section"
+        aria-label="WeatherChecker is currently displaying the weather for the following city:">
+            <div class="cities">
+                <!-- Location weather info will go here -->
+            </div>
+        </section>
+
+        <section class="button-section">
+            <form>
+            <button tabindex="0" type="submit" class="button" 
+            aria-label="Get weather for current location">
+            Find My Location</button>
+            </form>
+        </section>
+        <p id="confirmation" class="confirmation" aria-live="assertive"></p>
+    </main>
+</body>
+</html>

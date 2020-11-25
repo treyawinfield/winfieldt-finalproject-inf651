@@ -1,0 +1,79 @@
+// Variables
+$default-font-color: #000;
+$light-font-color: #fff;
+$shadow-color: #000;
+$background-color: #0B5394;
+$container-bgcolor: #f2f2f2;
+$textbox-bordercolor: lightgray;
+$button-textcolor: #fff;
+$add-button-color: #4caf50;
+
+// Mixins for media queries
+@mixin mq($size) {
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    font-size: 16px; 
+    font-family: "Poppins", sans-serif;
+    color: $default-font-color;
+    width: 100%;
+    // media query
+    @include mq(768px) {
+        font-size: 22px;
+    }
+}
+
+body {
+    padding: 0 20px 20px 20px;
+    background-color: $background-color;
+}
+
+h1 {
+  text-align: center;
+  padding: 0 0 0 0;
+  font-size: 2.8rem;
+  color: #fff;
+}
+
+.confirmation { // for screen reader
+  position: absolute;
+  left: -10000px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+

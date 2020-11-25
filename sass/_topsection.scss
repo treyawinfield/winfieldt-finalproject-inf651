@@ -1,0 +1,64 @@
+// top-section class
+.top-section {
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+
+    // nested styles
+    form {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        label {
+            // style label will be way off screen
+            // but screen reader will still be able to read it
+            position: absolute;
+            left: -10000px;
+        }
+
+        input[type="text"] { 
+            width: 60%;
+            margin: auto;
+            font-size: 1.25rem;
+            border: 2px solid $textbox-bordercolor;
+            border-radius: 10px;
+            padding: 00.75rem;
+            outline: none;  
+        }   
+
+        input[type="text"]:focus,
+        input[type="text"]:hover {
+            box-shadow: 4px 2px 5px #000; 
+        }
+
+        button {
+            width: 30%;
+            margin: auto;
+            font-size: 1.25rem;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            background-color: $add-button-color;
+            color: $light-font-color;
+            padding: 0.75rem;
+            border-radius: 10px;
+            @include mq(768px) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .msg {
+        color: #fff;
+        font-weight: bold;
+        border: none;
+        background-color: red;
+        border-radius: 5px;
+        text-align: center;
+        margin-top: 0.25rem;    
+    }
+}
+  
+  
